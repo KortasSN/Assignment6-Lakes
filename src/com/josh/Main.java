@@ -43,8 +43,22 @@ public class Main {
         ArrayList runTimes = new ArrayList();
         System.out.println("Enter your run time:");
         Scanner runTimesScanner = new Scanner(System.in);
-        double runTimesInt = runTimesScanner.nextInt();
-        runTimes.add(runTimesInt);
+        double runTimesDouble = 0;
+        //data verification with try/catch
+
+        while (true) {
+            try {
+                runTimesDouble = runTimesScanner.nextDouble();
+            } catch (InputMismatchException ime) {
+                System.out.println("Please try and enter your run time again:");
+                runTimesScanner.next();
+                continue;
+            }
+
+            break;
+
+        }
+        runTimes.add(runTimesDouble);
         return runTimes;
     }
 

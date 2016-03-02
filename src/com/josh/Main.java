@@ -22,25 +22,36 @@ public class Main {
             int counter = GetLakeRuns();
 
             System.out.println(counter);
-
+            double lowestRun = 8675309;
             for (int y = 0; y < counter; y++) {
+
                 ArrayList runTimes = GetRunTimes();
                 System.out.println(runTimes);
+                System.out.println(lakeName);
 
-                for (int a = 0; a < runTimes.size(); a++) {
-                    for (int b = 0; b < runTimes.size(); b++) {
-
-
-                        //if (runTimes.set(a). < runTimes.set(b)) {
-
-
-                        //if ((runTimes.get(a)  runTimes.get(b))) {
-
-                                            }
-                    // compare list.get(i) and list.get(j)
+                for (Object ob : runTimes) {
+                    double run = (double) ob;
+                    if (run < lowestRun) {
+                        lowestRun = run;
                     }
                 }
+
+
+                //int lowestRun = GetLowestRun(runTimes);
+                /*for (int a = 0; a < runTimes.size(); a++) {
+                        //if (runTimes.set(a). < runTimes.set(b)) {
+                        //if ((runTimes.get(a)  runTimes.get(b))) {
+                                            }
+                    // compare list.get(i) and list.get(j)
+                  */
             }
+            System.out.println("The Lowest run for " + lakeName + " is " + lowestRun + ".");
+
+        }
+    }
+
+
+
 
 
 
@@ -57,11 +68,12 @@ public class Main {
             //System.out.println(ob);
             //System.out.println(lowestRun);
             //System.out.println("finished");    //testing to let me know when code is finished
-        }
 
-    private static int GetLowestRun() {
-        return 0;
-    }
+
+    //private static int GetLowestRun() {
+
+
+    //}
 
     private static ArrayList GetRunTimes() {
         ArrayList runTimes = new ArrayList();

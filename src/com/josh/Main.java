@@ -18,26 +18,31 @@ public class Main {
             // GetInfo(getcounter);
 
             String lakeName = GetLakeName();
+
             int counter = GetLakeRuns();
+
             System.out.println(counter);
+
             for (int y = 0; y < counter; y++) {
-                LinkedList runTimes = GetRunTimes();
+                ArrayList runTimes = GetRunTimes();
                 System.out.println(runTimes);
 
                 for (int a = 0; a < runTimes.size(); a++) {
                     for (int b = 0; b < runTimes.size(); b++) {
-                        if (runTimes.set(a). < runTimes.set(b)) {
 
 
-                        if ((runTimes.get(a)  runTimes.get(b))) {
+                        //if (runTimes.set(a). < runTimes.set(b)) {
+
+
+                        //if ((runTimes.get(a)  runTimes.get(b))) {
 
                                             }
                     // compare list.get(i) and list.get(j)
                     }
                 }
             }
-        }
-    }
+
+
 
 
             //int lowestRun = GetLowestRun(runTimes);
@@ -58,8 +63,8 @@ public class Main {
         return 0;
     }
 
-    private static LinkedList GetRunTimes() {
-        LinkedList runTimes = new LinkedList();
+    private static ArrayList GetRunTimes() {
+        ArrayList runTimes = new ArrayList();
         System.out.println("Enter your run time:");
         Scanner runTimesScanner = new Scanner(System.in);
         double runTimesInt = runTimesScanner.nextInt();

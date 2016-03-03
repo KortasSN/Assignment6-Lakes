@@ -19,7 +19,6 @@ public class Main {
 
             int counter = GetLakeRuns();
 
-            System.out.println(counter);
             double lowestRun = 8675309;
             for (int y = 0; y < counter; y++) {
 
@@ -36,6 +35,19 @@ public class Main {
             GetEndResults(endResults,lakeName, lowestRun);
 
         }
+        PrintEndResults(endResults);
+
+    }
+
+
+    //
+    //
+    //
+    // METHODS BELOW //
+    //
+    //
+
+    private static void PrintEndResults(HashMap<String, Double> endResults) {
         for (Object ob: endResults.keySet()) {
             System.out.print("Lake " + ob);
             System.out.println(" with a run of " + endResults.get(ob));
@@ -43,8 +55,7 @@ public class Main {
     }
 
     private static HashMap<String, Double> GetEndResults(HashMap endResults, String lakeName, double lowestRun) {
-        //HashMap<String, Double> endResults = new HashMap<String, Double>();
-        //HashMap<String, Double> endResults = new HashMap<String, Double>();
+
         endResults.put(lakeName, lowestRun);
         return endResults;
     }

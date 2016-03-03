@@ -12,6 +12,7 @@ public class Main {
         Scanner amountScanner = new Scanner(System.in);
         System.out.println("How Many Lakes run?");   //ask how many training runs they want to enter
         int getcounter = amountScanner.nextInt();
+        HashMap<String, Double> endResults = new HashMap<String, Double>();
         for (int x = 0; x < getcounter; x++) {
 
             String lakeName = GetLakeName();
@@ -32,9 +33,20 @@ public class Main {
                 }
 
             }
-            System.out.println("The Lowest run for " + lakeName + " is " + lowestRun + ".");  //output of the lake name and lowest run
+            GetEndResults(endResults,lakeName, lowestRun);
 
         }
+        for (Object ob: endResults.keySet()) {
+            System.out.print("Lake " + ob);
+            System.out.println(" with a run of " + endResults.get(ob));
+        }
+    }
+
+    private static HashMap<String, Double> GetEndResults(HashMap endResults, String lakeName, double lowestRun) {
+        //HashMap<String, Double> endResults = new HashMap<String, Double>();
+        //HashMap<String, Double> endResults = new HashMap<String, Double>();
+        endResults.put(lakeName, lowestRun);
+        return endResults;
     }
 
     //Run Times

@@ -12,6 +12,7 @@ public class Main {
         Scanner amountScanner = new Scanner(System.in);
         System.out.println("How Many Lakes run?");   //ask how many training runs they want to enter
         int getcounter = amountScanner.nextInt();
+
         HashMap<String, Double> endResults = new HashMap<String, Double>();
         for (int x = 0; x < getcounter; x++) {
 
